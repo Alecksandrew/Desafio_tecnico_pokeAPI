@@ -1,0 +1,36 @@
+
+:root {
+    --form-background-color: #f2f2f7;
+}
+
+
+.search-form {
+    background-color: var(--form-background-color);
+    width: clamp(300px, 75vw, 900px);
+    padding: .75rem;
+    border-radius: 0.5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.search-form__input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+
+    flex: 1;
+}
+
+.search-form__button {
+    background-color: #ffcc03;
+    border: none;
+    border-radius: .25rem;
+    padding: .5rem;
+    font-weight: bold;
+
+}
+
