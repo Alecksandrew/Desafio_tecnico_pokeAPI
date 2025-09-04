@@ -4,6 +4,7 @@
     --form-background-color: #f2f2f7;
     --pokemon-card-background-color: #F0F3FF;
     --black-color: #2c2c2c;
+    --yellow-color: #ffcc03;
 
     --border-radius-small: .35rem;
     --border-radius-medium: .7rem;
@@ -13,7 +14,6 @@
     --padding-medium: .75rem;
     --padding-big: 1rem;
 }
-
 
 
 * {
@@ -79,12 +79,16 @@ main {
 }
 
 .search-form__button {
-    background-color: #ffcc03;
+    background-color: var(--yellow-color);
     border: none;
     border-radius: var(--border-radius-small);
     padding: var(--padding-small);
     font-weight: bold;
 
+}
+
+.search-form__button:disabled {
+    opacity: 40%;
 }
 
 .error-message {
@@ -159,7 +163,7 @@ main {
 
 
 .pagination__link--active {
-    background-color: #ffcc03;
+    background-color: var(--yellow-color);
 }
 
 .pagination__link--disabled {
@@ -175,7 +179,6 @@ main {
     border-radius: var(--border-radius-small);
     font-weight: bold;
 }
-
 
 
 

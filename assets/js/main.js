@@ -88,6 +88,7 @@ function renderCardsWithData(data) {
     cardsContainer.innerHTML = `<p class="error-message">Pokémon não encontrado. Tente novamente!</p>`;
     return;
   }
+    
 
   function validateData(data) {
     const id = data?.id ?? "Id?";
@@ -118,9 +119,12 @@ function renderCardsWithData(data) {
 function handleFormSubmit() {
   const searchForm = document.getElementsByClassName("search-form")[0]; //Estou utilizando className ao inves de atribuir um ID para reaproveitar class já criada e porque o projeto é pequeno;
   const searchInput = document.getElementsByClassName("search-form__input")[0];
+   const searchButton = document.querySelector(".search-form__button");
 
   searchForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+     searchButton.disabled = true;
 
     const searchText = searchInput.value;
     if (searchText == null || searchText == "") {
@@ -133,6 +137,7 @@ function handleFormSubmit() {
       paginationContainer.innerHTML = "";
       searchForm.reset();
     }
+    searchButton.disabled = false
   });
 }
 
@@ -300,4 +305,4 @@ function startPage() {
 
 
 
-startPage();
+startPage()
