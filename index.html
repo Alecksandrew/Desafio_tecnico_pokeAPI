@@ -9,7 +9,15 @@
     <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
-    <header><img src="/assets/imgs/logo-pokedex.png" alt="logo" /></header>
+    <header class="header">
+      <img src="/assets/imgs/logo-pokedex.png" alt="logo" />
+      <nav>
+        <ul class="navigation">
+          <li class="navigation__option">Home</li>
+          <li class="navigation__option">Pokedex</li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <form action="" class="search-form" id="search-form">
         <input
@@ -21,25 +29,8 @@
         <button type="submit" class="search-form__button">Pesquisar</button>
       </form>
       <ul class="cards-container"></ul>
-      <nav class="navigation" aria-label="Navegação de páginas">
+      <nav aria-label="Navegação de páginas">
         <ul class="pagination">
-          <li class="pagination__item">
-            <a class="pagination__link pagination__link--disabled" href="#">Anterior</a>
-          </li>
-
-          <li class="pagination__item ">
-            <a class="pagination__link pagination__link--active" aria-current="page" href="#">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
-          </li>
-
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">Próximo</a>
-          </li>
         </ul>
       </nav>
     </main>

@@ -26,8 +26,35 @@
 
 
 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--black-color);
+    padding: var(--border-radius-big);
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+    gap: 1.25rem;
+}
+
+.navigation__option {
+    border-radius: var(--border-radius-small);
+    padding: var(--padding-small);
+    font-weight: bold;
+}
+
+.navigation__option:hover {
+    background-color: var(--form-background-color);
+}
+
+
 main {
     width: clamp(300px, 80%, 1300px);
+    margin-block: 2rem;
     margin-inline: auto;
 }
 
