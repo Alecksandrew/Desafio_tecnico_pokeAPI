@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-    <header><img src="/assets/imgs/logo-pokedex.png" alt="logo"></header>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header><img src="/assets/imgs/logo-pokedex.png" alt="logo" /></header>
     <form action="" class="search-form">
-        <input type="text" name="searchText" placeholder="Faça uma busca pelo nome do pokemon" class="search-form__input">
-        <button type="button" class="search-form__button">Pesquisar</button>
+      <input
+        type="text"
+        name="searchText"
+        placeholder="Faça uma busca pelo nome do pokemon"
+        class="search-form__input"
+      />
+      <button type="button" class="search-form__button">Pesquisar</button>
     </form>
-    
-</body>
+    <ul class="cards-container">
+      <li class="cards-container__card card">
+        <div class="card__header">
+            <span class="card__type">grass</span>
+            <span class="card__id">#id</span>
+        </div>
+        <div class="card__img-wrapper">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            alt=""
+            class="card__img"
+          />
+        </div>
+        <span class="card__title">Nome do pokemon</span>
+      </li>
+       <li class="cards-container__card card">
+        <div class="card__header">
+            <span class="card__type">grass</span>
+            <span class="card__id">#id</span>
+        </div>
+        <div class="card__img-wrapper">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            alt=""
+            class="card__img"
+          />
+        </div>
+        <span class="card__title">Nome do pokemon</span>
+      </li>
+       <li class="cards-container__card card">
+        <div class="card__header">
+            <span class="card__type">grass</span>
+            <span class="card__id">#id</span>
+        </div>
+        <div class="card__img-wrapper">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            alt=""
+            class="card__img"
+          />
+        </div>
+        <span class="card__title">Nome do pokemon</span>
+      </li>
+       <li class="cards-container__card card">
+        <div class="card__header">
+            <span class="card__type">grass</span>
+            <span class="card__id">#id</span>
+        </div>
+        <div class="card__img-wrapper">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            alt=""
+            class="card__img"
+          />
+        </div>
+        <span class="card__title">Nome do pokemon</span>
+      </li>
+      
+    </ul>
+  </body>
 </html>
