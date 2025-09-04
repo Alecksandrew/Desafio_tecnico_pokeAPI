@@ -1,5 +1,6 @@
 "use strict";
 
+
 //Estado global
 const paginationState = {
   currentPage: 1,
@@ -8,6 +9,10 @@ const paginationState = {
 };
 
 const paginationContainer = document.querySelector(".pagination");
+
+
+//Placeholder quando não tiver imagem de pokemon
+const URL_PLACEHOLDER_IMAGE = "assets/imgs/Image-not-found.png"
 
 //===================================LÓGICA DE BUSCA DE DADOS=============================================================
 async function fetchBasicPokemonData() {
@@ -26,8 +31,7 @@ async function fetchBasicPokemonData() {
     paginationState.totalItems = pokemonData.count;
     return pokemonData.results;
   } catch (error) {
-    console.error(error); // -> Vou tentar fazer um card mostrando o tipo de erro que ocorrer
-    // para melhorar UX, mas nao sei se dará tempo: Por exemplo, 404 not found -> Nao existe pokemon com esse nome
+    console.error(error);
   }
 }
 
@@ -39,7 +43,10 @@ async function fetchComprehensivePokemonData(pokemonName) {
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
     );
 
-    if (!response.ok) {
+   if (!response.ok) {
+      if (response.status === 404) {
+        return null; 
+      }
       throw new Error(response.statusText);
     }
 
@@ -77,10 +84,15 @@ function renderCardsWithData(data) {
   const cardsContainer = document.getElementsByClassName("cards-container")[0];
   cardsContainer.innerHTML = "";
 
+  if (data === null) {
+    cardsContainer.innerHTML = `<p class="error-message">Pokémon não encontrado. Tente novamente!</p>`;
+    return;
+  }
+
   function validateData(data) {
-    const id = data?.id ?? "Id desconhecido";
-    const type = data?.types?.[0]?.type?.name ?? "Tipo desconhecido";
-    const img = data?.sprites?.front_default ?? "Imagem não encontrada";
+    const id = data?.id ?? "Id?";
+    const type = data?.types?.[0]?.type?.name ?? "Tipo?";
+    const img = data?.sprites?.front_default ?? URL_PLACEHOLDER_IMAGE;
     const name = data?.name ?? "Nome desconhecido";
 
     return { id, type, img, name };
