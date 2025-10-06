@@ -5,6 +5,7 @@
     --pokemon-card-background-color: #F0F3FF;
     --black-color: #2c2c2c;
     --yellow-color: #ffcc03;
+    --gray-color: #D9D9D9;
 
     --border-radius-small: .35rem;
     --border-radius-medium: .7rem;
@@ -20,7 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "DM Sans", sans-serif;
     color: var(--black-color);
 }
 
@@ -31,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--black-color);
+    border-bottom: 0.1px solid var(--gray-color);
     padding: var(--border-radius-big);
 }
 
@@ -42,9 +43,10 @@
 }
 
 .navigation__option {
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius-medium);
     padding: var(--padding-small);
-    font-weight: bold;
+    color: var(--black-color);
+    font-weight: 400;
 }
 
 .navigation__option:hover {
@@ -60,12 +62,19 @@ main {
 
 .search-form {
     background-color: var(--form-background-color);
-    padding: var(--padding-small);
-    border-radius: var(--border-radius-small);
+    border-radius: 28px;
+    padding: 4px;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    height: 56px;
+    min-width: 360px;
+    max-width: 720px;
+}
+
+.search-form > * {
+    margin-inline: 1rem;
 }
 
 
@@ -79,11 +88,10 @@ main {
 }
 
 .search-form__button {
-    background-color: var(--yellow-color);
     border: none;
-    border-radius: var(--border-radius-small);
-    padding: var(--padding-small);
-    font-weight: bold;
+    border-radius: var(--border-radius-big);
+    cursor: pointer;
+    min-width: 20px;
 
 }
 
@@ -110,10 +118,9 @@ main {
 
 .card {
     background-color: var(--pokemon-card-background-color);
-    border-radius: var(--border-radius-small);
     padding: var(--padding-big);
     position: relative;
-    border-radius: var(--border-radius-big);
+    border-radius: 8px;
 
     font-weight: bold;
 
@@ -163,7 +170,8 @@ main {
 
 
 .pagination__link--active {
-    background-color: var(--yellow-color);
+    background-color: var(--black-color);
+    color: var(--gray-color);
 }
 
 .pagination__link--disabled {
@@ -174,11 +182,42 @@ main {
 
 .pagination__link {
     text-decoration: none;
-    
     padding: var(--padding-small);
     border-radius: var(--border-radius-small);
     font-weight: bold;
 }
 
+.pagination__link[data-page="previous"] {
+    font-weight: 400;
+}
+
+.pagination__link[data-page="previous"]::before {
+  content: "";
+  display: inline-block;
+  width: 12px;              
+  height: 12px;
+  margin-right: 6px;
+  background-image: url("/assets/imgs/left-arrow.png"); 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.pagination__link[data-page="next"] {
+    font-weight: 400;
+}
+
+.pagination__link[data-page="next"]::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  background-image: url("/assets/imgs/right-arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 

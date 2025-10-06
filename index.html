@@ -7,6 +7,14 @@
 
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="/assets/js/main.js" defer></script>
+
+    <!---------DM SANS--------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -26,12 +34,49 @@
           placeholder="Faça uma busca pelo nome do pokemon"
           class="search-form__input"
         />
-        <button type="submit" class="search-form__button">Pesquisar</button>
+        <button type="submit" class="search-form__button">
+          <svg
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>ionicons-v5-f</title>
+              <path
+                d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z"
+                style="
+                  fill: none;
+                  stroke: #000000;
+                  stroke-miterlimit: 10;
+                  stroke-width: 32px;
+                "
+              ></path>
+              <line
+                x1="338.29"
+                y1="338.29"
+                x2="448"
+                y2="448"
+                style="
+                  fill: none;
+                  stroke: #000000;
+                  stroke-linecap: round;
+                  stroke-miterlimit: 10;
+                  stroke-width: 32px;
+                "
+              ></line>
+            </g>
+          </svg>
+        </button>
       </form>
       <ul class="cards-container"></ul>
       <nav aria-label="Navegação de páginas">
-        <ul class="pagination">
-        </ul>
+        <ul class="pagination"></ul>
       </nav>
     </main>
   </body>
